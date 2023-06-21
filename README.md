@@ -29,6 +29,7 @@ public class Main {
                             .routerPort(9090)
                             .registerURI("/register")
                             .serviceHost("localhost")
+                            .connectorHttpClientOptions(new HttpClientOptions().setSsl(true).setTrustAll(true))
                             .servicePort(httpServer.actualPort())
                             .serviceName(serviceName)
                             .optionalHeaders(MultiMap.caseInsensitiveMultiMap().add("Authorization", "Basic dmVydHgtcm91dGVyOnZlcnR4LXJvdXRlci1wd2Q="))
